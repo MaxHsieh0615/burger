@@ -1,1 +1,3 @@
 # burger
+
+Having problem deploying app to heroku. Fixing it...
