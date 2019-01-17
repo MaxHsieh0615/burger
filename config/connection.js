@@ -1,6 +1,6 @@
 // Dependencies
 var mysql = require("mysql");
-
+require('dotenv').config();
 
 // Creates mySQL connection using Mysql, the empty string in the third argument spot is our password.
 var connection;
@@ -11,7 +11,7 @@ else {
   connection = mysql.createConnection({
     host: "localhost",
     user: "root",
-    password: "baby22732864",
+    password: process.env.password,
     database: "burgers_db"
   });
 };
@@ -20,5 +20,4 @@ connection.connect(function (err) {
   console.log("id: " + connection.threadId)
 });
 
-connection.connect();
 module.exports = connection;
